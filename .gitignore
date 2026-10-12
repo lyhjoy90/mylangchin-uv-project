@@ -11,3 +11,9 @@ wheels/
 
 # env
 .env
+
+#db folder
+db/
+
+# gradio log
+03ChatBot/.gradio

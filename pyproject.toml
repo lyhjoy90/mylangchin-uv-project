@@ -15,6 +15,7 @@ dependencies = [
     "gradio-pdf>=0.0.24",
     "langchain>=1.4.3",
     "langchain-community>=0.4.2",
+    "langchain-experimental>=0.4.2",
     "langchain-google-genai>=4.4.0",
     "langchain-groq>=1.1.3",
     "langchain-ollama>=1.1.0",
@@ -30,6 +31,7 @@ dependencies = [
     "sse-starlette>=3.5.0",
     "tokenizers>=0.20.0,<0.21.0",
     "transformers>=4.46.3",
+    "unstructured[docx]>=0.27.25",
     "uvicorn>=0.54.0",
 ]
 
@@ -39,3 +41,6 @@ mylangchin-uv-project = "mylangchin_uv_project:main"
 [build-system]
 requires = ["uv_build>=0.12.23,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.uv]
+package = false
