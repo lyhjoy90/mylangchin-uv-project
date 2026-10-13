@@ -28,7 +28,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter     # 긴 �
 from langchain_community.vectorstores import FAISS                      # 메모리 기반 벡터 저장소
 
 # gradio 인터페이스를 위한 패키지 (PDF 업로드/미리보기 컴포넌트)
-from gradio_pdf import PDF
+#from gradio_pdf import PDF
 
 # ---------------------------------------------------------------------------
 # 상수
@@ -241,8 +241,9 @@ def create_interface():
         with gr.Row():
             # 왼쪽: PDF 업로드 + 고급 설정
             with gr.Column(scale=1):
-                pdf_input = PDF(label="PDF 파일 업로드")  # 값은 업로드된 파일의 경로(str)
-
+                #pdf_input = PDF(label="PDF 파일 업로드")  # 값은 업로드된 파일의 경로(str)
+                pdf_input = gr.File(label="PDF 파일 업로드", file_types=[".pdf"], type="filepath")
+                
                 with gr.Accordion("고급 설정", open=False):
                     chunk_size = gr.Number(
                         label="청크 크기",
